@@ -1,5 +1,5 @@
 import "./App.css";
-import MultiSelectDropdown from "./components/dropdown";
+import MultiSelectDropdown from "./components/Dropdown";
 
 function App() {
   return (
