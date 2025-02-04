@@ -1,35 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import MultiSelectDropdown from "./components/dropdown";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+      <div style={{ backgroundColor: "gray", padding: "1rem" }}>
+        <a href="https://makyo.co" target="_blank">
+          <img
+            src="https://makyo.co/wp-content/uploads/2024/03/makyo-logo-reverse-rgb-1059px@72ppi.png"
+            className="logo"
+            alt="makyo"
+          />
         </a>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>Dropdown Test</h1>
+      <MultiSelectDropdown
+        id="default-dropdown"
+        options={[
+          "Option 1",
+          "Option with icon",
+          "Long Long Option 3",
+          "Long Long Long Option 4",
+          "Long Long Long Long Option 5",
+          "Long Long Long Long Long Option 6",
+        ]}
+        placeholder="Select options..."
+        label="Label"
+        withSearch={true}
+        usePortal={false}
+        multiple={true}
+      />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
